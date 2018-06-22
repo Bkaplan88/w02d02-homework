@@ -65,11 +65,11 @@ const game = {
 		if (playerCard.damage > computerCard.damage) {
 			alert("You win");
 			player.points++;
-			console.log(`Player has ${player.points} points.`)
+			document.write(`Player has ${player.points} points.`)
 		} else if (computerCard.damage > playerCard.damage) {
 			alert("computer wins");
 			this.computerPoints++;
-			console.log(`The computer has ${this.computerPoints} points.`);
+			document.write(`The computer has ${this.computerPoints} points.`);
 		}
 		this.playedCards.push(playerCard, computerCard);
 	},
@@ -79,9 +79,10 @@ const game = {
 			this.battle();
 		if (player.points > this.computerPoints) {
 			player.roundsWon++;
-			console.log(`The player won this round. ${player.roundsWon} rounds won.`);
+			alert(`The player won this round. ${player.roundsWon} rounds won.`);
 		} else if (this.computerPoints > player.points) {
 			this.computerRoundsWon++;
+			alert(`The computer has won ${this.computerRoundsWon} rounds.`)
 			}
 		}
 		player.points = 0;
@@ -124,94 +125,6 @@ game.playGame();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-// 	},
-// 	createComputerHand() {
-// 		for (let i = 0; i < 3; i++) {
-// 			this.computerHand.push(this.deal());
-// 			console.log(`Computer has been dealt ${this.deal()[i]}`);
-			
-// 		}
-// 		return this.computerHand;
-// 	},
-// 	createPlayerHand() {
-// 		for (let i = 0; i < 3; i++) {
-// 			this.playerHand.push(this.deal());
-// 			console.log(`Player had been dealt ${this.deal()}`);
-			
-// 		}
-// 		return this.playerHand;
-// 	},
-
-// 	round() {
-// 		console.log(`Player played ${this.playerHand[i].name} card`);
-// 		console.log(`Computer played ${this.computerHand[i].name} card`);
-// 		for (let i = 0; i < 3; i++) {
-// 			if (this.computerHand[i].damage > this.playerHand[i].damage); {
-// 				console.log()
-// 			}
-
-
-// 		}
-// 	}
-
-// 	// roundWin() {
-// 	// 	let playerPoints = 0;
-// 	// 	let computerPoints = 0;
-// 	// 	for (let i = 0; i < this.playerHand.length; i++) {
-// 	// 		console.log(`player played ${(this.playerHand[i].name)} card`);
-// 	// 		console.log(`computer played ${this.computerHand[i].name} card`);
-// 	// 		if (this.playerHand[i].damage > this.computerHand[i].damage) {
-// 	// 			playerPoints++;
-// 	// 		} else if (this.computerHand[i].damage > this.playerHand[i].damage) {
-// 	// 			computerPoints++;
-// 	// 		}
-//  //  		}
-//  //  		if (playerPoints > computerPoints) {
-//  //  			this.playerRoundsWon++;
-//  //  			console.log("Player won round");
-
-//  //  		} else if (computerPoints > playerPoints) {
-//  //  			this.computerRoundsWon++;
-//  //  			console.log("Computer won round");
-
-//  //  		}
-//  // 	},
-//  // 	startGame() {
-//  // 		for (let i = 0; i < this.availableCards.lengths; i++) {
-//  // 		this.deal();
-//  // 		this.createPlayerHand();
-//  // 		this.createComputerHand();
-//  // 		this.roundWin();
-//  // 			if (this.availableCards.length < 6) {
-//  // 				console.log("game over");
-
-//  // 			}
-
-//  // 		}
-//  // 	},
-// };
-
-
-// console.log(game.createComputerHand());
 
 
 
